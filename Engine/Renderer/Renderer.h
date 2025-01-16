@@ -17,9 +17,13 @@ namespace st
     public:
         Renderer(Screen& screen);
 
+        void printRenderingBuffer();
+
         std::vector<st::Point> getBuffer();
 
         void draw(st::Point& point);
+
+        void clearBuffer();
 
         void render();
 

@@ -14,12 +14,11 @@ int main()
     st::Point Player2('*', {15, 15});
 
     
-    while (true)
-    {       
+    while (!(st::InputHandler::isKeyPressed('q')))
+    {   
         renderer.draw(Player);
         renderer.draw(Player2);
 
-        
         if (st::InputHandler::isKeyPressed('w'))
         {
             Player.setPosition().y -= 1;
@@ -38,10 +37,14 @@ int main()
         }
 
         renderer.render();
+        renderer.clearBuffer();
+
         screen.refresh();
         
         Sleep(16);
     }
+
+    renderer.printRenderingBuffer();
     
     return 0;
 }

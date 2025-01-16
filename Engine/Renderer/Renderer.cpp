@@ -6,6 +6,14 @@ namespace st
     {
     }
 
+    void Renderer::printRenderingBuffer()
+    {
+        for (st::Point& p : buffer)
+        {
+            std::cout << p.getSymbol();
+        }
+    }
+
     std::vector<st::Point> Renderer::getBuffer()
     {
         return buffer;
@@ -14,6 +22,11 @@ namespace st
     void Renderer::draw(st::Point& point)
     {
         buffer.emplace_back(point); 
+    }
+
+    void Renderer::clearBuffer()
+    {
+        buffer.clear();
     }
 
     void Renderer::render()
