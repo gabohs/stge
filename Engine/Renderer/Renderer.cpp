@@ -24,6 +24,11 @@ namespace st
         buffer.emplace_back(point); 
     }
 
+    void Renderer::draw(std::vector<st::Point> &points)
+    {
+        buffer.insert(buffer.end(), points.begin(), points.end());
+    }
+
     void Renderer::clearBuffer()
     {
         buffer.clear();

@@ -2,6 +2,7 @@
 #include <windows.h>
 
 #include "../../Engine/stge.h"
+#include <vector>
 
 int main()
 {   
@@ -13,11 +14,15 @@ int main()
     st::Point Player('@', {10, 10});
     st::Point Player2('*', {15, 15});
 
+    std::vector<st::Point> Snake{ st::Point('x', {20, 20}), st::Point('o', {20, 21})};
+    
     
     while (!(st::InputHandler::isKeyPressed('q')))
     {   
-        renderer.draw(Player);
-        renderer.draw(Player2);
+        // renderer.draw(Player);
+        // renderer.draw(Player2);
+
+        renderer.draw(Snake);
 
         if (st::InputHandler::isKeyPressed('w'))
         {
@@ -38,13 +43,10 @@ int main()
 
         renderer.render();
         renderer.clearBuffer();
-
         screen.refresh();
         
         Sleep(16);
     }
-
-    renderer.printRenderingBuffer();
     
     return 0;
 }

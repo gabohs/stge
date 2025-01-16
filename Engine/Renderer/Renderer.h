@@ -22,6 +22,7 @@ namespace st
         std::vector<st::Point> getBuffer();
 
         void draw(st::Point& point);
+        void draw(std::vector<st::Point>& points);
 
         void clearBuffer();
 
