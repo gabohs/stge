@@ -5,3 +5,18 @@
 > Check the DOCS folder for documentation
 
 > OBS: under development
+
+
+
+## Running the sample Game
+
+### Build the project
+
+``` 
+cmake -B build
+```
+
+### Run the game
+
+
+* `Now run the runSampleGame.bat file`
