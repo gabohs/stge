@@ -14,21 +14,10 @@ namespace st
     {
         return m_Size;
     }
+
     char Screen::getEdgeChar()
     {
         return m_edgeChar;
-    }
-
-    void Screen::hideCursor()
-    {
-        printf("\033[?25l");
-        fflush(stdout);
-    }
-
-    void Screen::showCursor()
-    {
-        printf("\033[?25h");
-        fflush(stdout);
     }
 
     void Screen::refresh()

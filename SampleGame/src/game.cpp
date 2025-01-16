@@ -9,18 +9,23 @@ int main()
     st::Screen screen({75, 40}, '#');
     st::Renderer renderer(screen);
 
-    screen.hideCursor();
+    st::Cursor::hideCursor();
 
     st::Point Player('@', {10, 10});
     st::Point Player2('*', {15, 15});
 
-    std::vector<st::Point> Snake{ st::Point('x', {20, 20}), st::Point('o', {20, 21})};
+    std::vector<st::Point> Snake{  
+        st::Point('x', {20, 20}), 
+        st::Point('o', {20, 21}),
+        st::Point('o', {20, 22})
+    };
     
+    screen.refresh();
     
     while (!(st::InputHandler::isKeyPressed('q')))
     {   
-        // renderer.draw(Player);
-        // renderer.draw(Player2);
+        renderer.draw(Player);
+        renderer.draw(Player2);
 
         renderer.draw(Snake);
 
@@ -43,9 +48,10 @@ int main()
 
         renderer.render();
         renderer.clearBuffer();
-        screen.refresh();
+
+        st::Cursor::gotoHome();
         
-        Sleep(16);
+        Sleep(15);
     }
     
     return 0;

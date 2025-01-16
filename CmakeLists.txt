@@ -10,6 +10,7 @@ set(SOURCE_FILES
     Engine/Screen/Screen.cpp
     Engine/Renderer/Point.cpp
     Engine/InputHandler/InputHandler.cpp
+    Engine/Cursor/Cursor.cpp
     
     )
 

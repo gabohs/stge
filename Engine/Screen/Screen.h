@@ -16,9 +16,6 @@ namespace st
         st::Vector2 getSize();
         char getEdgeChar();
 
-        void hideCursor();
-        void showCursor();
-
         void refresh();
     };
 } 
