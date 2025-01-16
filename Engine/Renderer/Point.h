@@ -14,7 +14,7 @@ namespace st
         Point(char Char, st::Vector2 initialPos);
 
         char getSymbol();
-        st::Vector2 getPosition();
-        void setPosition(st::Vector2 newCoords);
+        const st::Vector2& getPosition() const;
+        st::Vector2& setPosition();
     };
 }

@@ -1,6 +1,6 @@
 #include "Screen.h"
 #include <stdlib.h>
-#include <stdio.h>
+#include <iostream>
 
 namespace st
 {
@@ -33,12 +33,6 @@ namespace st
 
     void Screen::refresh()
     {   
-        #if defined(_WIN32) || defined(_WIN64)
-            system("cls");
-
-        #else
-            system("clear") // for linux systems
-
-        #endif
+        system("cls");
     }
 }

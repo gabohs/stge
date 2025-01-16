@@ -2,7 +2,7 @@
 
 namespace st
 {
-    Renderer::Renderer(Screen screen) : m_Screen(screen)
+    Renderer::Renderer(Screen& screen) : m_Screen(screen)
     {
     }
 

@@ -5,9 +5,11 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 set(SOURCE_FILES
     SampleGame/src/game.cpp
+    
     Engine/Renderer/Renderer.cpp
     Engine/Screen/Screen.cpp
     Engine/Renderer/Point.cpp
+    Engine/InputHandler/InputHandler.cpp
     
     )
 

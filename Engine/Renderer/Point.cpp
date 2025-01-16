@@ -13,13 +13,13 @@ namespace st
         return m_Char;
     }
     
-    st::Vector2 Point::getPosition()
+    const st::Vector2& Point::getPosition() const
     {
         return m_Coords;
     }
 
-    void Point::setPosition(st::Vector2 newCoords)
+    st::Vector2& Point::setPosition()
     {
-        m_Coords = newCoords;
+        return m_Coords;
     }
 }

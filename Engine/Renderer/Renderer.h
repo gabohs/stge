@@ -15,7 +15,7 @@ namespace st
         std::vector<st::Point> buffer{};
 
     public:
-        Renderer(Screen screen);
+        Renderer(Screen& screen);
 
         std::vector<st::Point> getBuffer();
 
