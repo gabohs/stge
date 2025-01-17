@@ -4,7 +4,9 @@ project(gmath VERSION 1.0)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 set(SOURCE_FILES
-    SampleGame/src/game.cpp
+    SampleGame/Pong/game.cpp
+    SampleGame/Pong/Paddle.cpp
+    SampleGame/Pong/Ball.cpp
     
     Engine/Renderer/Renderer.cpp
     Engine/Screen/Screen.cpp
